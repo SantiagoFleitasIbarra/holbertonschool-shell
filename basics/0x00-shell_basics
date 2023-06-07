@@ -1,1 +1,2 @@
-touch xd
+#!/bin/bash
+echo $(realpath $0)
