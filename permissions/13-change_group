@@ -1,2 +1,2 @@
-#!bin/bash
+#!/bin/bash
 chgrp 664 school hello
