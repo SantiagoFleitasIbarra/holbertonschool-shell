@@ -57,6 +57,9 @@ void search_and_execute(char **args)
 {
 	char *path = getenv("PATH");
 
+	if (args[0] == NULL)
+		return;
+
 	if (path)
 	{
 		char path_copy[MAX_INPUT_SIZE];
@@ -78,6 +81,13 @@ void search_and_execute(char **args)
 			dir = strtok(NULL, ":");
 		}
 		if (!found)
-			fprintf(stderr, "bash: %s: command not found\n", args[0]);
+		{
+			if (strchr(args[0], '/') != NULL)
+				fprintf(stderr, "%s: No such file or directory\n", args[0]);
+			else if (dir == NULL)
+				fprintf(stderr, "bash: %s: command not found\n",args[0]);
+			else
+				fprintf(stderr, "%s: Is a directory\n", args[0]);
+		}
 	}
 }
