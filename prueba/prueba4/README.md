@@ -11,13 +11,13 @@
 
 
 ## Builtins
-| Command | Synopsis | Description |
-| ------- | -------- | ----------- |
-| `cd` | `cd [DIRECTORY]` | Change the current working directory |
-| `env` | `env` | Print the environment |
-| `exit` | `exit [STATUS]` | Exit the shell |
-| `help` | `help [BUILTIN]` | Print a help messages for built-ins | 
-| `setenv` | `setenv VARIABLE VALUE` | Set an environment variable |
-| `unsetenv` | `unsetenv VARIABLE` | Unset an environment variable |
+| Command | Description |
+| ------- | ----------- |
+| `cd` | Change the current working directory |
+| `env` | Print the environment |
+| `exit` | Exit the shell |
+| `help` | Print a help messages for built-ins | 
+| `setenv` | Set an environment variable |
+| `unsetenv` | Unset an environment variable |
 
 ## 
