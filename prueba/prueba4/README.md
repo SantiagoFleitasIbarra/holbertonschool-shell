@@ -3,12 +3,10 @@
 ## Content
 * [Overview](#Overview)
 * [Builtins](#Builtins)
-* [List of allowed functions](#List-of-allowed-functions)
 * [Example](#Example)
-* [Tasks](#Tasks)
-
+* [Authors](Authors)
 ## Overview
-
+A Unix shell is a command-line interpreter or shell that provides a command line user interface for Unix-like operating systems. The shell is both an interactive command language and a scripting language, and is used by the operating system to control the execution of the system using shell scripts.
 
 ## Builtins
 | Command | Description |
@@ -19,9 +17,6 @@
 | `help` | Print a help messages for built-ins | 
 | `setenv` | Set an environment variable |
 | `unsetenv` | Unset an environment variable |
-
-## List of allowed functions
-
 
 ## Example
 ### Clone repo using HTTPS
@@ -48,7 +43,7 @@ $
 ---
 
 ### Usage
-Enter the no-interactive mode after compilation:
+Enter the non-interactive mode after compilation:
 ```bash
 $ ./hsh
  simple@shell $ /bin/ls
@@ -58,3 +53,7 @@ $ ./hsh
 $
 ```
 ---
+
+## Authors
+* Santiago Fleitas
+* Agustina Araujo
