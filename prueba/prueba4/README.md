@@ -1,5 +1,5 @@
 # Simple Shell
-
+![Holberton logo](https://techcrunch.com/wp-content/uploads/2015/11/holberton-logo-horizontal.jpg)
 ## Content
 * [Overview](#Overview)
 * [Builtins](#Builtins)
