@@ -34,6 +34,7 @@ void handle_noninteractive_mode(void)
 		tokenize_input(input, args);
 		if (args[0] != NULL)
 			execute_input(args);
+
 	}
 }
 /**
