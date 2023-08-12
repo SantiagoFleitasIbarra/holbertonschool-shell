@@ -9,7 +9,7 @@ int main(void)
 		int token_count = 0, i;
 		struct InternalCommand *internal_cmds = get_internal_commands();
 
-		printf("$ ");
+		display_prompt();
 		if (fgets(input, sizeof(input), stdin) == NULL)
 		{
 			if (feof(stdin))
@@ -42,4 +42,10 @@ int main(void)
 			free(tokens[i]);
 	}
 	return (0);
+}
+/***/
+void display_prompt(void)
+{
+	printf("$ ");
+	fflush(stdout);
 }

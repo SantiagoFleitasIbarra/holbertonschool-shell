@@ -28,6 +28,6 @@ char *get_absolute_path(char *command);
 void execute_command(char **args);
 int main(void);
 struct InternalCommand* get_internal_commands();
-
+void display_prompt(void);
 
 #endif
