@@ -10,12 +10,20 @@ int main(void)
 		struct InternalCommand *internal_cmds = get_internal_commands();
 
 		printf("$ ");
-		fgets(input, sizeof(input), stdin);
+		if (fgets(input, sizeof(input), stdin) == NULL)
+		{
+			if (feof(stdin))
+			{
+				printf("\n");
+				break;
+			}
+			else
+				perror("fgets"), exit(EXIT_FAILURE);
+		}
 		token = strtok(input, " \t\n");
 		while (token != NULL && token_count < MAX_TOKENS)
 		{
-			tokens[token_count] = strdup(token);
-			token_count++;
+			tokens[token_count] = strdup(token), token_count++;
 			token = strtok(NULL, " \t\n");
 		}
 		tokens[token_count] = NULL;
@@ -32,7 +40,6 @@ int main(void)
 			execute_command(tokens);
 		for (i = 0; i < token_count; i++)
 			free(tokens[i]);
-
 	}
 	return (0);
 }
