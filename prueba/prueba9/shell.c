@@ -28,16 +28,8 @@ int main(void)
 			}
 
 		}
-		if (internal_cmds[token_count].name == NULL)
-		{
-			char *full_path = get_full_path(tokens[0]);
-
-			if (full_path != NULL)
-			{
-				execute_command(tokens);
-				free(full_path);
-			}
-		}
+		if (internal_cmds[i].name == NULL)
+			execute_command(tokens);
 		for (i = 0; i < token_count; i++)
 			free(tokens[i]);
 

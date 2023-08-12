@@ -23,9 +23,11 @@ void cd_command(char **args);
 void exit_command(char **args);
 void env_command(char **args);
 void execute_external_command(char **args);
-char *get_full_path(char *command);
+char *search_path(char *command);
+char *get_absolute_path(char *command);
 void execute_command(char **args);
 int main(void);
 struct InternalCommand* get_internal_commands();
+
 
 #endif
